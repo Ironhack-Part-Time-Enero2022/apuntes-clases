@@ -20,4 +20,4 @@ WHERE nombre = "Daniel";
 
 
 -- chequeemos ahora nuestra tabla
-select * from clientes;
+select * from clientauthorses;
