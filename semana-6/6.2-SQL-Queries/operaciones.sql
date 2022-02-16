@@ -22,8 +22,15 @@ SELECT pub_id ,AVG(price) as median_price FROM titles -- y luego seleccionamos e
 GROUP BY pub_id; -- primero agrupamos por pub_id
 
 ---------------
--- 3️⃣ suma -- 
+-- 3️⃣ SUMA -- 
 ---------------
 
 SELECT pub_id ,SUM(price) as m_price FROM titles -- y luego seleccionamos el pub_id y calculamos el precio media para cada uno de los grupos
+GROUP BY pub_id; -- primero agrupamos por pub_id
+
+---------------------
+-- 4️⃣ OPERACIONES -- 
+---------------------
+
+SELECT pub_id ,(MAX(price) - MIN(price)) as max_diferencia FROM titles -- y luego seleccionamos el pub_id y calculamos el precio máximo para cada uno de los grupos
 GROUP BY pub_id; -- primero agrupamos por pub_id
