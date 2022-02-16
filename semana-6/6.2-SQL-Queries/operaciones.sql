@@ -32,5 +32,5 @@ GROUP BY pub_id; -- primero agrupamos por pub_id
 -- 4️⃣ OPERACIONES -- 
 ---------------------
 
-SELECT pub_id ,(MAX(price) - MIN(price)) as max_diferencia FROM titles -- y luego seleccionamos el pub_id y calculamos el precio máximo para cada uno de los grupos
+SELECT pub_id ,ROUND(MAX(price) - MIN(price), 2) as max_diferencia FROM titles -- y luego calculamos la diferencia entre el precio máximo y mínimo
 GROUP BY pub_id; -- primero agrupamos por pub_id
