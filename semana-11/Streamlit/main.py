@@ -66,16 +66,12 @@ else:
     t.drop(["species"], axis = 1, inplace = True)
     st.table(t)
 
-    # create a map with the species presences
+    # creamos un mapa con la distribucion de las especies
    
-    #get some conclusions of the data
+ # algunos gráficos máss
     st.plotly_chart(sp.plots_year(data, x_axis))
     st.plotly_chart(sp.plots_month(data, x_axis))
 
    
     st.text("Mapa de la distribución global")
     sp.maps(df)
-
-    st.text("Map of the distribution in a country")
-    sp.kepler(df, al.config)
-
